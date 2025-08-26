@@ -1,0 +1,113 @@
+/* App.css - Fixed Alignment Version */
+:root {
+  --primary: #4361ee;
+  --primary-dark: #3a56d4;
+  --light-bg: #f8f9fa;
+  --text-dark: #212529;
+  --text-light: #6c757d;
+  --white: #ffffff;
+  --spacing-unit: 16px;
+  --max-width: 1200px;
+  --border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--light-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-unit);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Strict alignment container */
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.route-container {
+  width: 100%;
+  max-width: 100%;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-unit);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: var(--spacing-unit);
+}
+
+/* Loading spinner */
+.auth-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-left-color: var(--primary);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Strict alignment for all direct children */
+.main-content > * {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  :root {
+    --spacing-unit: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-unit: 8px;
+  }
+  
+  .main-content {
+    padding: 8px;
+  }
+}

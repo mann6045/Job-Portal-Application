@@ -1,0 +1,172 @@
+/* JobSeekerDashboard.css */
+.jobseeker-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dashboard-title {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .profile-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .profile-btn:hover {
+    background-color: #3182ce;
+  }
+  
+  .back-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #718096;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 1.5rem;
+  }
+  
+  .back-btn:hover {
+    background-color: #4a5568;
+  }
+  
+  .filters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background-color: #f8fafc;
+  }
+  
+  .filter-input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+    background-color: white;
+  }
+  
+  .search-btn {
+    grid-column: 1 / -1;
+    padding: 0.75rem;
+    background-color: #38a169;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .search-btn:hover {
+    background-color: #2f855a;
+  }
+  
+  .search-btn:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  .jobs-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .job-item {
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .job-item:hover {
+    transform: translateY(-2px);
+  }
+  
+  .apply-btn {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .apply-btn:hover:not(:disabled) {
+    background-color: #3182ce;
+  }
+  
+  .apply-btn:disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  .loading-message {
+    text-align: center;
+    padding: 2rem;
+    color: #4a5568;
+  }
+  
+  .no-jobs-message {
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+    background-color: #f8fafc;
+    border-radius: 8px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .jobseeker-container {
+      padding: 1rem;
+    }
+    
+    .dashboard-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .filters-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-btn, .back-btn {
+      width: 100%;
+    }
+  }

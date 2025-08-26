@@ -1,0 +1,144 @@
+/* Login.css */
+:root {
+  --primary: #4299E1;
+  --primary-dark: #3182CE;
+  --error: #E53E3E;
+  --gray-light: #EDF2F7;
+  --gray-dark: #4A5568;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #F7FAFC;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.login-logo {
+  margin-bottom: 24px;
+}
+
+.login-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1A202C;
+  margin-bottom: 8px;
+}
+
+.login-header p {
+  color: var(--gray-dark);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-dark);
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+  background-color: var(--gray-light);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.input-group input::placeholder {
+  color: #A0AEC0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+button:disabled {
+  background-color: #BEE3F8;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 13px;
+  padding: 8px;
+  background-color: #FFF5F5;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+}

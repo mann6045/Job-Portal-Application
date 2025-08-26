@@ -1,0 +1,95 @@
+/* JobCard.css */
+.job-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    border-left: 4px solid #4361ee;
+    transition: all 0.3s ease;
+  }
+  
+  .job-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+  
+  .job-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .job-meta {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+  }
+  
+  .job-location {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  
+  .job-skills {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .job-description {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-top: 0.75rem;
+  }
+  
+  .delete-btn {
+    padding: 0.5rem 1rem;
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c53030;
+  }
+  
+  /* Icon styles (using Unicode as fallback) */
+  .job-meta i {
+    margin-right: 0.4rem;
+    color: #718096;
+    font-style: normal;
+  }
+  
+  .job-location i::before {
+    content: "📍";
+  }
+  
+  .job-skills i::before {
+    content: "🛠️";
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .job-header {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .job-title {
+      font-size: 1.1rem;
+    }
+  }
